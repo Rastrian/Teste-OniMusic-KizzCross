@@ -24,3 +24,6 @@ class Music(models.Model):
         get_artist = Artist.objects.get(name=ArtistName)
         musics_dict = [entry for entry in (Music.objects.filter(foreign_key=get_artist).values())]
         return musics_dict
+
+    def getArtistName(self):
+        return Artist.get(foreign_key=self.foreign_key).value(name)
