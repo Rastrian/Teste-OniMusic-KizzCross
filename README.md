@@ -33,3 +33,8 @@ This packages are automatically builded by docker, you can see their names on th
 - [Django Admin](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/) **(required)**
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) **(required)**
 - [simplejson](https://pypi.org/project/simplejson/) **(optinally added for fix decimal issues when parsing to json/str)**
+
+## External Sources
+Some of them already had been quoted in this project, in the docs of the technologies used.
+- [How to Export Your Data as CSV, XLS, or XLSX - DjangoTricks](https://djangotricks.blogspot.com/2013/12/how-to-export-data-as-excel.html)
+- [How to export django admin changelist as csv - StackOverflow](https://stackoverflow.com/questions/59574280/how-to-export-django-admin-changelist-as-csv)
