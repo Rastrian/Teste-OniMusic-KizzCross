@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-
 class Artist(models.Model):
     name = models.CharField(max_length=30, null=False)
     date_created = models.DateTimeField(auto_now_add=True, null=False)
@@ -16,7 +13,6 @@ class Music(models.Model):
     youtube_published = models.BooleanField(null=False)
     foreign_key = models.ForeignKey(Artist, null=False, on_delete=models.CASCADE, default=None)
 
-
     def __str__(self):
         return self.title
 
@@ -24,6 +20,3 @@ class Music(models.Model):
         get_artist = Artist.objects.get(name=ArtistName)
         musics_dict = [entry for entry in (Music.objects.filter(foreign_key=get_artist).values())]
         return musics_dict
-
-    def getArtistName(self):
-        return Artist.get(foreign_key=self.foreign_key).value(name)
